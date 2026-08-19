@@ -42,20 +42,99 @@
             <div class="figma-card-icon" style="margin-bottom: 16px;">
               {%- case block.settings.icon -%}
                 {%- when 'recycle' -%}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="7 19 3 15 7 11"/><path d="M3 15h11a5 5 0 0 0 5-5 5 5 0 0 0-5-5H3"/></svg>
-                {%- when 'construction' -%}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                {%- when 'plant' -%}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-                {%- when 'truck' -%}
+               <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_1_330" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="60" height="60">
+<rect width="60" height="60" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_1_330)">
+<path d="M21.3318 52.0432C16.9185 50.3157 13.3056 47.4752 10.4931 43.5219C7.6806 39.5682 6.27435 35.0657 6.27435 30.0144C6.27435 28.819 6.35435 27.6402 6.51435 26.4782C6.67476 25.3165 6.93601 24.1796 7.2981 23.0675L3.14935 25.4763L1.2981 22.245L12.13 15.9957L18.38 26.7888L15.1106 28.6875L11.5431 22.5C11.0368 23.673 10.661 24.8917 10.4156 26.1563C10.1706 27.4209 10.0481 28.715 10.0481 30.0388C10.0481 34.3046 11.2685 38.138 13.7093 41.5388C16.1498 44.9392 19.3235 47.343 23.2306 48.75L21.3318 52.0432ZM38.3893 21.2257V17.4763H45.5143C43.6139 15.1013 41.3096 13.2655 38.6012 11.9688C35.8929 10.6721 33.0258 10.0238 30 10.0238C27.5321 10.0238 25.2131 10.4382 23.0431 11.2669C20.8731 12.0952 18.9181 13.2515 17.1781 14.7357L15.2787 11.4182C17.3141 9.81566 19.5729 8.55775 22.055 7.64441C24.5375 6.73108 27.1779 6.27441 29.9762 6.27441C33.2516 6.27441 36.3654 6.909 39.3175 8.17816C42.2691 9.44733 44.8764 11.2807 47.1393 13.6782V8.72629H50.8893V21.2257H38.3893ZM37.75 58.6057L26.9181 52.3319L33.1681 41.5625L36.3987 43.4375L32.6681 49.8269C37.601 49.1507 41.7148 46.9375 45.0093 43.1875C48.3043 39.4375 49.9518 35.0417 49.9518 30C49.9518 29.3334 49.9175 28.6898 49.8487 28.0694C49.7796 27.4494 49.6633 26.8348 49.5 26.2257H53.3362C53.4583 26.8348 53.5498 27.4455 53.6106 28.0575C53.6714 28.6696 53.7018 29.3092 53.7018 29.9763C53.7018 35.505 52.0087 40.408 48.6225 44.685C45.2362 48.9621 40.8796 51.7355 35.5525 53.005L39.625 55.375L37.75 58.6057Z" fill="url(#paint0_linear_1_330)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1_330" x1="37.9819" y1="14.3135" x2="16.5409" y2="51.5018" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EB5E28" stop-opacity="0.6"/>
+<stop offset="1" stop-color="#EB5E28"/>
+</linearGradient>
+</defs>
+</svg>
+ {%- when 'construction' -%}
+              <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M35.7119 43.3844L19.9619 27.5575C19.0802 27.9392 18.1844 28.2333 17.2744 28.44C16.364 28.6467 15.3975 28.75 14.375 28.75C10.3846 28.75 6.99125 27.3517 4.195 24.555C1.39833 21.7588 0 18.3654 0 14.375C0 13.0833 0.164375 11.8485 0.493125 10.6706C0.821458 9.49271 1.28854 8.37167 1.89437 7.3075L10.875 16.2406L16.2406 10.875L7.35625 1.9425C8.42 1.33667 9.53292 0.86146 10.695 0.516876C11.8567 0.172293 13.0833 0 14.375 0C18.3654 0 21.759 1.39833 24.5556 4.195C27.3519 6.99125 28.75 10.3846 28.75 14.375C28.75 15.4296 28.6506 16.4119 28.4519 17.3219C28.2531 18.2323 27.955 19.1123 27.5575 19.9619L43.385 35.7119C43.8208 36.1477 44.0387 36.6796 44.0387 37.3075C44.0387 37.9358 43.8208 38.4679 43.385 38.9038L38.8563 43.4325C38.42 43.8683 37.8958 44.0783 37.2837 44.0625C36.6717 44.0463 36.1477 43.8202 35.7119 43.3844Z" fill="url(#paint0_linear_1_353)"/>
+<defs>
+<linearGradient id="paint0_linear_1_353" x1="22.0194" y1="0" x2="22.0194" y2="44.0633" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EB5E28"/>
+<stop offset="1" stop-color="#252422"/>
+</linearGradient>
+</defs>
+</svg>
+  {%- when 'plant' -%}
+             <svg width="70" height="60" viewBox="0 0 70 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.49">
+<path d="M53.913 10.5085L61.2664 23.2452L53.9132 35.9818L39.2057 35.9821L31.8523 23.2454L39.2063 10.5084L53.913 10.5085Z" fill="url(#paint0_linear_1_367)" fill-opacity="0.64" stroke="url(#paint1_linear_1_367)" stroke-width="4"/>
+<path d="M30.5982 24.0182L37.9516 36.755L30.5984 49.4915L15.8909 49.4919L8.53746 36.7552L15.8915 24.0181L30.5982 24.0182Z" fill="url(#paint2_linear_1_367)" fill-opacity="0.64" stroke="url(#paint3_linear_1_367)" stroke-width="4"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1_367" x1="46.5607" y1="9.63234" x2="46.5607" y2="37.5395" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EB5E28" stop-opacity="0.6"/>
+<stop offset="1" stop-color="#EB5E28"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1_367" x1="46.5607" y1="9.63234" x2="46.5607" y2="37.5395" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EB5E28" stop-opacity="0.6"/>
+<stop offset="1" stop-color="#EB5E28"/>
+</linearGradient>
+<linearGradient id="paint2_linear_1_367" x1="23.2459" y1="23.1421" x2="23.2459" y2="51.0493" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EB5E28" stop-opacity="0.6"/>
+<stop offset="1" stop-color="#EB5E28"/>
+</linearGradient>
+<linearGradient id="paint3_linear_1_367" x1="23.2459" y1="23.1421" x2="23.2459" y2="51.0493" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EB5E28" stop-opacity="0.6"/>
+<stop offset="1" stop-color="#EB5E28"/>
+</linearGradient>
+</defs>
+</svg>
+  {%- when 'truck' -%}
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
                 {%- when 'building' -%}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="6" x2="9" y2="6.01"/><line x1="15" y1="6" x2="15" y2="6.01"/><line x1="9" y1="10" x2="9" y2="10.01"/><line x1="15" y1="10" x2="15" y2="10.01"/><line x1="9" y1="14" x2="9" y2="14.01"/><line x1="15" y1="14" x2="15" y2="14.01"/></svg>
-                {%- when 'utilities' -%}
+               <svg width="70" height="60" viewBox="0 0 70 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.49">
+<path d="M53.913 10.5085L61.2664 23.2452L53.9132 35.9818L39.2057 35.9821L31.8523 23.2454L39.2063 10.5084L53.913 10.5085Z" fill="url(#paint0_linear_1_367)" fill-opacity="0.64" stroke="url(#paint1_linear_1_367)" stroke-width="4"/>
+<path d="M30.5982 24.0182L37.9516 36.755L30.5984 49.4915L15.8909 49.4919L8.53746 36.7552L15.8915 24.0181L30.5982 24.0182Z" fill="url(#paint2_linear_1_367)" fill-opacity="0.64" stroke="url(#paint3_linear_1_367)" stroke-width="4"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1_367" x1="46.5607" y1="9.63234" x2="46.5607" y2="37.5395" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EB5E28" stop-opacity="0.6"/>
+<stop offset="1" stop-color="#EB5E28"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1_367" x1="46.5607" y1="9.63234" x2="46.5607" y2="37.5395" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EB5E28" stop-opacity="0.6"/>
+<stop offset="1" stop-color="#EB5E28"/>
+</linearGradient>
+<linearGradient id="paint2_linear_1_367" x1="23.2459" y1="23.1421" x2="23.2459" y2="51.0493" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EB5E28" stop-opacity="0.6"/>
+<stop offset="1" stop-color="#EB5E28"/>
+</linearGradient>
+<linearGradient id="paint3_linear_1_367" x1="23.2459" y1="23.1421" x2="23.2459" y2="51.0493" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EB5E28" stop-opacity="0.6"/>
+<stop offset="1" stop-color="#EB5E28"/>
+</linearGradient>
+</defs>
+</svg>
+ {%- when 'utilities' -%}
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
                 {%- when 'leaf' -%}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 2 7 0 6-4.5 9-10 11z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
-                {%- else -%}
+               <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.7383 22.5498H18.7256C16.221 22.5498 13.8202 22.076 11.5234 21.1279C9.2272 20.1799 7.1982 18.8251 5.43652 17.0635C3.67527 15.3018 2.3306 13.2678 1.40332 10.9619C0.476004 8.65591 0.0126953 6.25175 0.0126953 3.75V0.0126953H3.75C6.20791 0.0126953 8.58781 0.491509 10.8896 1.44922C13.1918 2.40651 15.2211 3.76463 16.9766 5.52344C18.2834 6.83029 19.3552 8.29001 20.1924 9.90234C21.0301 11.515 21.6303 13.228 21.9922 15.041L21.999 15.0742L22.0156 15.0449C22.3036 14.5455 22.6238 14.0719 22.9775 13.625C23.3313 13.1784 23.7262 12.7372 24.1621 12.3018C25.9214 10.5429 27.9549 9.18483 30.2617 8.22754C32.5685 7.26988 34.9731 6.79102 37.4756 6.79102H41.2129V10.5283C41.2129 13.0313 40.7345 15.4369 39.7764 17.7441C38.8183 20.0514 37.4589 22.0847 35.6992 23.8447C33.9396 25.6044 31.922 26.9477 29.6465 27.875C27.3705 28.8023 24.9803 29.2666 22.4756 29.2666H22.4629V42.3916H18.7383V22.5498Z" fill="url(#paint0_linear_1_386)" stroke="url(#paint1_linear_1_386)" stroke-width="0.025"/>
+<defs>
+<linearGradient id="paint0_linear_1_386" x1="28.8589" y1="6.51405" x2="11.2319" y2="36.1965" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EB5E28" stop-opacity="0.6"/>
+<stop offset="1" stop-color="#EB5E28"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1_386" x1="28.8589" y1="6.51405" x2="11.2319" y2="36.1965" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EB5E28"/>
+</linearGradient>
+</defs>
+</svg>
+ {%- else -%}
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
               {%- endcase -%}
             </div>

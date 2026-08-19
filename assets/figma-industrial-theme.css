@@ -157,8 +157,22 @@
   line-height: 1.1;
   letter-spacing: 0;
   margin: 0;
-  border-bottom: 1px solid var(--color-accent-orange);
   padding-bottom: 20px;
+  position: relative;
+}
+
+.figma-hero-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+
+  background: linear-gradient(90deg,
+      var(--color-accent-orange) 0%,
+      var(--color-accent-orange) 60%,
+      #d5d0d0 100%);
 }
 
 .figma-hero-title span {
@@ -672,6 +686,21 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin: 0 0 20px 0;
+}
+
+.figma-footer-top-left {
+  display: grid;
+  grid-column: 1/span 2;
+  padding-right: 50px;
+}
+
+.figma-footer-col.contact {
+  align-items: flex-end;
+}
+
+.figma-footer-top-left .figma-footer-col {
+  display: flex;
+  justify-content: space-between;
 }
 
 .figma-footer-links {
