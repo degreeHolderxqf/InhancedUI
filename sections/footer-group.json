@@ -1,0 +1,19 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "custom-footer": {
+      "type": "custom-footer",
+      "settings": {
+        "logo_text": "LOGO",
+        "years_num": "20+",
+        "phone": "000000000",
+        "email": "Abcd@gmail.com",
+        "copyright_text": "2026 © Design"
+      }
+    }
+  },
+  "order": [
+    "custom-footer"
+  ]
+}

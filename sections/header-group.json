@@ -1,0 +1,93 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_nKznqJ": {
+          "type": "announcement",
+          "settings": {
+            "icon": "lightning",
+            "text": "Rapid Response Times",
+            "link": "tel:123456789"
+          }
+        },
+        "announcement_nhatYi": {
+          "type": "announcement",
+          "settings": {
+            "icon": "map",
+            "text": "NATIONWIDE COVERAGE",
+            "link": "tel:123456789"
+          }
+        },
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "icon": "phone",
+            "text": "24/7 Response Capability",
+            "link": "tel:123456789"
+          }
+        },
+        "announcement_TThbjc": {
+          "type": "announcement",
+          "settings": {
+            "icon": "check",
+            "text": "7 days a Week",
+            "link": "tel:123456789"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_nKznqJ",
+        "announcement_nhatYi",
+        "announcement-bar-0",
+        "announcement_TThbjc"
+      ],
+      "settings": {
+        "show_announcement_bar": true,
+        "enable_sticky": false,
+        "enable_close_button": false,
+        "bg_color": "#111519",
+        "text_color": "#CCC5B9",
+        "accent_color": "#e25822",
+        "border_color": "#ffffff14",
+        "phone_number": "12345677",
+        "show_social": true,
+        "linkedin_url": "https://www.linkedin.com/",
+        "facebook_url": "https://www.linkedin.com/"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle-left",
+        "mobile_logo_position": "center",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": true,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

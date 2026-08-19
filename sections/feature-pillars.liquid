@@ -1,0 +1,148 @@
+{% comment %}
+  Modular Shopify OS 2.0 Section: Feature Pillars Grid (4 Pillar Cards)
+  Figma Frame: 01 Nationwide Coverage, 02 Specialist Equipment, 03 Environmental Compliance, 04 Operational Reliability
+{% endcomment %}
+
+<section class="figma-industrial-theme figma-pillars-section">
+  <div class="figma-container">
+    <div class="figma-pillars-grid">
+      {%- for block in section.blocks -%}
+        <div class="figma-pillar-card{% if block.settings.bg_image != blank %} has-bg-img{% endif %}" 
+             {% if block.settings.bg_image != blank %}style="background-image: url('{{ block.settings.bg_image | image_url: width: 600 }}');"{% endif %}
+             {{ block.shopify_attributes }}>
+          <div class="figma-pillar-card-content">
+            <div class="figma-pillar-num">{{ block.settings.number | default: '01' }}</div>
+            <h3 class="figma-pillar-title">{{ block.settings.title }}</h3>
+            <p class="figma-pillar-desc">{{ block.settings.description }}</p>
+          </div>
+
+          {%- if block.settings.show_badge -%}
+            <div class="figma-pillar-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- else -%}
+        {% comment %} Default fallback blocks if none added in Customizer {% endcomment %}
+        <div class="figma-pillar-card bg-dot-pattern">
+          <div class="figma-pillar-card-content">
+            <div class="figma-pillar-num">01</div>
+            <h3 class="figma-pillar-title">Nationwide Coverage</h3>
+            <p class="figma-pillar-desc">Mobile teams operating across the UK.</p>
+          </div>
+          <div class="figma-pillar-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+        </div>
+
+        <div class="figma-pillar-card bg-dot-pattern">
+          <div class="figma-pillar-card-content">
+            <div class="figma-pillar-num">02</div>
+            <h3 class="figma-pillar-title">Specialist Equipment</h3>
+            <p class="figma-pillar-desc">Steam cleaning and industrial degreasing systems.</p>
+          </div>
+        </div>
+
+        <div class="figma-pillar-card bg-dot-pattern">
+          <div class="figma-pillar-card-content">
+            <div class="figma-pillar-num">03</div>
+            <h3 class="figma-pillar-title">Environmental Compliance</h3>
+            <p class="figma-pillar-desc">Wastewater recovery and responsible disposal.</p>
+          </div>
+        </div>
+
+        <div class="figma-pillar-card bg-dot-pattern">
+          <div class="figma-pillar-card-content">
+            <div class="figma-pillar-num">04</div>
+            <h3 class="figma-pillar-title">Operational Reliability</h3>
+            <p class="figma-pillar-desc">Flexible scheduling and minimal downtime.</p>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Feature Pillars",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "pillar",
+      "name": "Pillar Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Card Number",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card Title",
+          "default": "Nationwide Coverage"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Card Description",
+          "default": "Mobile teams operating across the UK."
+        },
+        {
+          "type": "image_picker",
+          "id": "bg_image",
+          "label": "Background Image Overlay"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_badge",
+          "label": "Show Globe Badge",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Pillars",
+      "blocks": [
+        {
+          "type": "pillar",
+          "settings": {
+            "number": "01",
+            "title": "Nationwide Coverage",
+            "description": "Mobile teams operating across the UK.",
+            "show_badge": true
+          }
+        },
+        {
+          "type": "pillar",
+          "settings": {
+            "number": "02",
+            "title": "Specialist Equipment",
+            "description": "Steam cleaning and industrial degreasing systems."
+          }
+        },
+        {
+          "type": "pillar",
+          "settings": {
+            "number": "03",
+            "title": "Environmental Compliance",
+            "description": "Wastewater recovery and responsible disposal."
+          }
+        },
+        {
+          "type": "pillar",
+          "settings": {
+            "number": "04",
+            "title": "Operational Reliability",
+            "description": "Flexible scheduling and minimal downtime."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

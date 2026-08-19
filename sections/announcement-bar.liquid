@@ -1,0 +1,426 @@
+{% comment %}
+  Modular Shopify OS 2.0 Section: Announcement Bar
+  Figma Node-ID: 1-49
+  Industrial Dark Utility Bar with Highlights, Phone, Social Icons & Dynamic Customization Schema
+{% endcomment %}
+
+{%- if section.settings.show_announcement_bar -%}
+  <div 
+    id="AnnouncementBar-{{ section.id }}" 
+    class="figma-announcement-bar-wrapper{% if section.settings.enable_sticky %} figma-announcement-sticky{% endif %}"
+    style="
+      --announcement-bg: {{ section.settings.bg_color | default: '#0E1114' }};
+      --announcement-text: {{ section.settings.text_color | default: '#94A3B8' }};
+      --announcement-accent: {{ section.settings.accent_color | default: '#E25822' }};
+      --announcement-border: {{ section.settings.border_color | default: 'rgba(255, 255, 255, 0.08)' }};
+    "
+  >
+    <div class="figma-announcement-container">
+      <div class="figma-announcement-inner">
+        <!-- Left Side: Highlights / Announcement Blocks -->
+        <div class="figma-announcement-left">
+          {%- if section.blocks.size > 0 -%}
+            {%- for block in section.blocks -%}
+              {%- if forloop.index > 1 -%}
+                <span class="figma-announcement-divider"></span>
+              {%- endif -%}
+              <div class="figma-announcement-item" {{ block.shopify_attributes }}>
+                {%- if block.settings.link != blank -%}
+                  <a href="{{ block.settings.link }}" class="figma-announcement-link">
+                {%- endif -%}
+
+                {%- case block.settings.icon -%}
+                  {%- when 'phone' -%}
+                    <svg viewBox="0 0 24 24" class="figma-announcement-icon" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  {%- when 'map' -%}
+                    <svg viewBox="0 0 24 24" class="figma-announcement-icon" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  {%- when 'lightning' -%}
+                    <svg viewBox="0 0 24 24" class="figma-announcement-icon" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  {%- when 'check' -%}
+                    <svg viewBox="0 0 24 24" class="figma-announcement-icon" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  {%- when 'star' -%}
+                    <svg viewBox="0 0 24 24" class="figma-announcement-icon" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                {%- endcase -%}
+
+                <span class="figma-announcement-text">{{ block.settings.text }}</span>
+
+                {%- if block.settings.link != blank -%}
+                  </a>
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+          {%- else -%}
+            <!-- Fallback Default Items matching Figma node 1-49 -->
+            <div class="figma-announcement-item">
+              <svg viewBox="0 0 24 24" class="figma-announcement-icon" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span class="figma-announcement-text">24/7 RESPONSE CAPABILITY</span>
+            </div>
+            <span class="figma-announcement-divider"></span>
+            <div class="figma-announcement-item">
+              <svg viewBox="0 0 24 24" class="figma-announcement-icon" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="figma-announcement-text">NATIONWIDE COVERAGE</span>
+            </div>
+            <span class="figma-announcement-divider"></span>
+            <div class="figma-announcement-item">
+              <svg viewBox="0 0 24 24" class="figma-announcement-icon" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <span class="figma-announcement-text">Rapid Response Times</span>
+            </div>
+            <span class="figma-announcement-divider"></span>
+            <div class="figma-announcement-item">
+              <svg viewBox="0 0 24 24" class="figma-announcement-icon" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="figma-announcement-text">7 days a Week</span>
+            </div>
+          {%- endif -%}
+        </div>
+
+        <!-- Right Side: Phone Number & Social Icons -->
+        <div class="figma-announcement-right">
+          {%- if section.settings.phone_number != blank -%}
+            <a href="tel:{{ section.settings.phone_number | remove: ' ' }}" class="figma-announcement-phone">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.125 15C12.3889 15 10.6736 14.6215 8.97917 13.8646C7.28472 13.1076 5.74306 12.0347 4.35417 10.6458C2.96528 9.25694 1.89236 7.71528 1.13542 6.02083C0.378472 4.32639 0 2.61111 0 0.875C0 0.625 0.0833333 0.416667 0.25 0.25C0.416667 0.0833333 0.625 0 0.875 0H4.25C4.44444 0 4.61806 0.0659722 4.77083 0.197917C4.92361 0.329861 5.01389 0.486111 5.04167 0.666667L5.58333 3.58333C5.61111 3.80556 5.60417 3.99306 5.5625 4.14583C5.52083 4.29861 5.44444 4.43056 5.33333 4.54167L3.3125 6.58333C3.59028 7.09722 3.92014 7.59375 4.30208 8.07292C4.68403 8.55208 5.10417 9.01389 5.5625 9.45833C5.99306 9.88889 6.44444 10.2882 6.91667 10.6562C7.38889 11.0243 7.88889 11.3611 8.41667 11.6667L10.375 9.70833C10.5 9.58333 10.6632 9.48958 10.8646 9.42708C11.066 9.36458 11.2639 9.34722 11.4583 9.375L14.3333 9.95833C14.5278 10.0139 14.6875 10.1146 14.8125 10.2604C14.9375 10.4062 15 10.5694 15 10.75V14.125C15 14.375 14.9167 14.5833 14.75 14.75C14.5833 14.9167 14.375 15 14.125 15Z" fill="#CCC5B9"/>
+</svg>
+  <span>{{ section.settings.phone_number }}</span>
+            </a>
+          {%- endif -%}
+
+          {%- if section.settings.show_social -%}
+            <span class="figma-announcement-divider"></span>
+            <div class="figma-announcement-socials">
+              {%- if section.settings.linkedin_url != blank -%}
+                <a href="{{ section.settings.linkedin_url }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.78255 4.16652C5.78233 4.60855 5.60652 5.03239 5.29381 5.34479C4.98109 5.6572 4.55708 5.83258 4.11505 5.83236C3.67302 5.83214 3.24919 5.65633 2.93678 5.34361C2.62438 5.0309 2.449 4.60688 2.44922 4.16486C2.44944 3.72283 2.62525 3.29899 2.93796 2.98659C3.25068 2.67419 3.67469 2.4988 4.11672 2.49902C4.55875 2.49924 4.98258 2.67505 5.29499 2.98777C5.60739 3.30049 5.78277 3.7245 5.78255 4.16652ZM5.83255 7.06652H2.49922V17.4999H5.83255V7.06652ZM11.0992 7.06652H7.78255V17.4999H11.0659V12.0249C11.0659 8.97486 15.0409 8.69152 15.0409 12.0249V17.4999H18.3326V10.8915C18.3326 5.74986 12.4492 5.94152 11.0659 8.46652L11.0992 7.06652Z" fill="#CCC5B9"/>
+</svg>
+ </a>
+              {%- endif -%}
+
+              {%- if section.settings.facebook_url != blank -%}
+                <a href="{{ section.settings.facebook_url }}" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.6654 11.2493H13.7487L14.582 7.91602H11.6654V6.24935C11.6654 5.39102 11.6654 4.58268 13.332 4.58268H14.582V1.78268C14.3104 1.74685 13.2845 1.66602 12.2012 1.66602C9.9387 1.66602 8.33203 3.04685 8.33203 5.58268V7.91602H5.83203V11.2493H8.33203V18.3327H11.6654V11.2493Z" fill="#CCC5B9"/>
+</svg>
+ </a>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+
+          {%- if section.settings.enable_close_button -%}
+            <button class="figma-announcement-close" id="AnnouncementClose-{{ section.id }}" aria-label="Close Announcement Bar">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .figma-announcement-bar-wrapper {
+      background-color: var(--announcement-bg);
+      color: var(--announcement-text);
+      
+      font-size: 12px;
+      line-height: 1.2;
+      padding: 26px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .figma-announcement-sticky {
+      position: sticky;
+      top: 0;
+    }
+
+    .figma-announcement-container {
+      max-width: 1376px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .figma-announcement-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .figma-announcement-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .figma-announcement-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .figma-announcement-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .figma-announcement-link:hover {
+      color: #FFFFFF;
+    }
+
+    .figma-announcement-icon {
+      width: 15px;
+      height: 15px;
+      color: #CCC5B9;
+      flex-shrink: 0;
+    }
+
+   .figma-announcement-right .figma-announcement-icon {
+      color: var(--announcement-accent); 
+    }
+
+
+    .figma-announcement-text {
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      font-size: 12px;
+      color:#CCC5B9;
+      line-height:14px;
+    }
+
+    .figma-announcement-divider {
+      display: inline-block;
+      width: 1px;
+      height: 12px;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .figma-announcement-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .figma-announcement-phone {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 13px;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .figma-announcement-phone:hover {
+      color: var(--announcement-accent);
+    }
+
+    .figma-announcement-socials {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .figma-announcement-socials a {
+      color: var(--announcement-text);
+      transition: color 0.2s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .figma-announcement-socials a:hover {
+      color: var(--announcement-accent);
+    }
+
+    .figma-announcement-close {
+      background: none;
+      border: none;
+      color: var(--announcement-text);
+      cursor: pointer;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s ease;
+    }
+
+    .figma-announcement-close:hover {
+      color: #FFFFFF;
+    }
+
+    @media screen and (max-width: 768px) {
+      .figma-announcement-inner {
+        justify-content: center;
+      }
+      .figma-announcement-left {
+        justify-content: center;
+      }
+      .figma-announcement-divider {
+        display: none;
+      }
+    }
+  </style>
+
+  {%- if section.settings.enable_close_button -%}
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var closeBtn = document.getElementById('AnnouncementClose-{{ section.id }}');
+        var bar = document.getElementById('AnnouncementBar-{{ section.id }}');
+        if (closeBtn && bar) {
+          closeBtn.addEventListener('click', function() {
+            bar.style.display = 'none';
+          });
+        }
+      });
+    </script>
+  {%- endif -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_announcement_bar",
+      "label": "Enable Announcement Bar",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky",
+      "label": "Sticky Announcement Bar",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_close_button",
+      "label": "Show Close Button",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#0E1114"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#94A3B8"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent Color",
+      "default": "#E25822"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border Color",
+      "default": "rgba(255, 255, 255, 0.08)"
+    },
+    {
+      "type": "header",
+      "content": "Contact & Social Settings"
+    },
+    {
+      "type": "text",
+      "id": "phone_number",
+      "label": "Phone Number",
+      "default": "12345677"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social",
+      "label": "Show Social Icons",
+      "default": true
+    },
+    {
+      "type": "url",
+      "id": "linkedin_url",
+      "label": "LinkedIn URL"
+    },
+    {
+      "type": "url",
+      "id": "facebook_url",
+      "label": "Facebook URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "Announcement Item",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "phone", "label": "Phone" },
+            { "value": "map", "label": "Location Pin" },
+            { "value": "lightning", "label": "Lightning" },
+            { "value": "check", "label": "Checkmark" },
+            { "value": "star", "label": "Star" }
+          ],
+          "default": "phone"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Announcement Text",
+          "default": "24/7 RESPONSE CAPABILITY"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link URL (Optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement Bar",
+      "blocks": [
+        {
+          "type": "announcement",
+          "settings": {
+            "icon": "phone",
+            "text": "24/7 RESPONSE CAPABILITY"
+          }
+        },
+        {
+          "type": "announcement",
+          "settings": {
+            "icon": "map",
+            "text": "NATIONWIDE COVERAGE"
+          }
+        },
+        {
+          "type": "announcement",
+          "settings": {
+            "icon": "lightning",
+            "text": "Rapid Response Times"
+          }
+        },
+        {
+          "type": "announcement",
+          "settings": {
+            "icon": "check",
+            "text": "7 days a Week"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,164 @@
+{% comment %}
+  Modular Shopify OS 2.0 Section: Custom Footer
+  Figma Frame: Complete Footer with Accreditation Logos & Back To Top
+{% endcomment %}
+
+<footer class="figma-industrial-theme figma-footer">
+  <div class="figma-container">
+    <div class="figma-footer-top">
+      <!-- Col 1: Logo & Laurel Badge -->
+      <div class="figma-footer-col">
+        <a href="{{ routes.root_url }}" class="figma-logo" style="margin-bottom: 16px;">
+          {{ section.settings.logo_text | default: 'LOGO' }}
+        </a>
+        <div class="figma-footer-badge">
+          <div class="figma-laurel-badge">
+            <span class="num">{{ section.settings.years_num | default: '20+' }}</span>
+            <span class="text">Years In Business</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 2: Contact Us -->
+      <div class="figma-footer-col">
+        <h4>Contact Us</h4>
+        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem;">
+          <a href="tel:{{ section.settings.phone | default: '000000000' }}" style="color: var(--color-text-muted); text-decoration: none;">
+            {{ section.settings.phone | default: '000000000' }}
+          </a>
+          <a href="mailto:{{ section.settings.email | default: 'Abcd@gmail.com' }}" style="color: var(--color-text-muted); text-decoration: none;">
+            {{ section.settings.email | default: 'Abcd@gmail.com' }}
+          </a>
+          <div style="display: flex; gap: 16px; margin-top: 16px;">
+            <a href="{{ section.settings.linkedin | default: '#' }}" style="color: var(--color-text-light); text-decoration: none; font-size: 0.85rem; font-weight: 600;">LinkedIn ↗</a>
+            <a href="{{ section.settings.facebook | default: '#' }}" style="color: var(--color-text-light); text-decoration: none; font-size: 0.85rem; font-weight: 600;">Facebook ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 3: Quick Section -->
+      <div class="figma-footer-col">
+        <h4>Quick Section</h4>
+        <ul class="figma-footer-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#industries">Industry</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Menu Pages -->
+      <div class="figma-footer-col">
+        <h4>Menu Pages</h4>
+        <ul class="figma-footer-links">
+          <li><a href="{{ routes.root_url }}">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#case-studies">Case Study</a></li>
+          <li><a href="#locations">Location</a></li>
+          <li><a href="#blog">Blogs</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 5: Utility Pages -->
+      <div class="figma-footer-col">
+        <h4>Utility Pages</h4>
+        <ul class="figma-footer-links">
+          <li><a href="#compliance">Environmental Compliance</a></li>
+          <li><a href="#license">License</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Partner & Accreditation Badges Strip -->
+    <div class="figma-partner-strip">
+      <div class="figma-partner-logo">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>SafeContractor</span>
+      </div>
+      <div class="figma-partner-logo">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span>CHAS</span>
+      </div>
+      <div class="figma-partner-logo">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="7 19 3 15 7 11"/><path d="M3 15h11a5 5 0 0 0 5-5 5 5 0 0 0-5-5H3"/></svg>
+        <span>SEPA</span>
+      </div>
+      <div class="figma-partner-logo">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg>
+        <span>IPAF</span>
+      </div>
+      <div class="figma-partner-logo">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>ISO 9001</span>
+      </div>
+      <div class="figma-partner-logo">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 2 7 0 6-4.5 9-10 11z"/></svg>
+        <span>Environment Agency</span>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="figma-footer-bottom">
+      <button class="figma-back-to-top">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+        <span>Back To Top</span>
+      </button>
+
+      <div>{{ section.settings.copyright_text | default: '2026 © Design' }}</div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Custom Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "logo_text",
+      "label": "Logo Text",
+      "default": "LOGO"
+    },
+    {
+      "type": "text",
+      "id": "years_num",
+      "label": "Years in Business",
+      "default": "20+"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Contact Phone",
+      "default": "000000000"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Contact Email",
+      "default": "Abcd@gmail.com"
+    },
+    {
+      "type": "url",
+      "id": "linkedin",
+      "label": "LinkedIn URL"
+    },
+    {
+      "type": "url",
+      "id": "facebook",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Copyright Text",
+      "default": "2026 © Design"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Footer"
+    }
+  ]
+}
+{% endschema %}

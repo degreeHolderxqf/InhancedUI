@@ -1,0 +1,236 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_banner": {
+      "type": "hero-banner",
+      "settings": {
+        "heading_prefix": "Built ",
+        "heading_highlight": "Around Operations,",
+        "heading_suffix": "Not Just Appearance",
+        "paragraph_1": "Our focus goes beyond presentation, helping organizations maintain operational standards, support compliance requirements, and protect valuable assets.",
+        "paragraph_2": "Supporting waste management operators, local authorities, construction companies, and industrial organisations with specialist expertise, nationwide capability, and environmentally responsible service delivery.",
+        "show_cta": true,
+        "cta_text": "CALL NOW"
+      }
+    },
+    "feature_pillars": {
+      "type": "feature-pillars",
+      "blocks": {
+        "pillar_1": {
+          "type": "pillar",
+          "settings": {
+            "number": "01",
+            "title": "Nationwide Coverage",
+            "description": "Mobile teams operating across the UK.",
+            "show_badge": true
+          }
+        },
+        "pillar_2": {
+          "type": "pillar",
+          "settings": {
+            "number": "02",
+            "title": "Specialist Equipment",
+            "description": "Steam cleaning and industrial degreasing systems."
+          }
+        },
+        "pillar_3": {
+          "type": "pillar",
+          "settings": {
+            "number": "03",
+            "title": "Environmental Compliance",
+            "description": "Wastewater recovery and responsible disposal."
+          }
+        },
+        "pillar_4": {
+          "type": "pillar",
+          "settings": {
+            "number": "04",
+            "title": "Operational Reliability",
+            "description": "Flexible scheduling and minimal downtime."
+          }
+        }
+      },
+      "block_order": [
+        "pillar_1",
+        "pillar_2",
+        "pillar_3",
+        "pillar_4"
+      ],
+      "settings": {}
+    },
+    "why_cleaning_matters": {
+      "type": "why-cleaning-matters",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "theme": "light",
+            "icon": "shield",
+            "title": "Asset Protection",
+            "description": "Removes corrosive contaminants, waste residue and heavy build-up that accelerate wear, corrosion and component failure."
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "theme": "dark",
+            "icon": "search",
+            "title": "Easier Inspections",
+            "description": "A clean fleet makes it easier to identify leaks, damage, and maintenance issues before they become costly repairs."
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "theme": "light",
+            "icon": "excavator",
+            "title": "Improved Performance",
+            "description": "Clean vehicles and equipment operate more efficiently by preventing excessive build-up of dirt, grease, and debris."
+          }
+        },
+        "card_4": {
+          "type": "card",
+          "settings": {
+            "theme": "dark",
+            "icon": "wrench",
+            "title": "Lower Maintenance Costs",
+            "description": "Preventative maintenance reduces expensive repairs, extends asset life and minimises long-term operating costs."
+          }
+        },
+        "card_5": {
+          "type": "card",
+          "settings": {
+            "theme": "light",
+            "icon": "recycle",
+            "title": "Compliance Ready",
+            "description": "Supports environmental legislation, health & safety standards and waste industry regulations across every operation."
+          }
+        },
+        "card_6": {
+          "type": "card",
+          "settings": {
+            "theme": "dark",
+            "icon": "truck",
+            "title": "Professional Fleet Image",
+            "description": "Well-maintained vehicles demonstrate professionalism, reliability, and operational excellence to stakeholders."
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3",
+        "card_4",
+        "card_5",
+        "card_6"
+      ],
+      "settings": {
+        "title_prefix": "Why ",
+        "title_highlight": "Cleaning",
+        "title_suffix": "Matters"
+      }
+    },
+    "industries_grid": {
+      "type": "industries-grid",
+      "blocks": {
+        "ind_1": {
+          "type": "industry",
+          "settings": {
+            "icon": "recycle",
+            "title": "Recycling Industry",
+            "description": "Helping recycling operators maintain site standards across demanding operational environments."
+          }
+        },
+        "ind_2": {
+          "type": "industry",
+          "settings": {
+            "icon": "construction",
+            "title": "Construction Industry",
+            "description": "Providing specialist support for contractors operating excavators, telehandlers, loading shovels, dump trucks and heavy construction equipment."
+          }
+        },
+        "ind_3": {
+          "type": "industry",
+          "settings": {
+            "icon": "plant",
+            "title": "Plant Hire Companies",
+            "description": "Preparing hired equipment for customer handover while helping..."
+          }
+        },
+        "ind_4": {
+          "type": "industry",
+          "settings": {
+            "icon": "truck",
+            "title": "Logistics & Transport",
+            "description": "Supporting transport operators..."
+          }
+        },
+        "ind_5": {
+          "type": "industry",
+          "settings": {
+            "icon": "building",
+            "title": "Local Authorities & Councils",
+            "description": "Supporting municipal fleets, public service vehicles, street cleansing operations and environmental service departments nationwide."
+          }
+        },
+        "ind_6": {
+          "type": "industry",
+          "settings": {
+            "icon": "utilities",
+            "title": "Utilities Sector",
+            "description": "Supporting utility providers and infrastructure contractors with specialist fleet maintenance."
+          }
+        },
+        "ind_7": {
+          "type": "industry",
+          "settings": {
+            "icon": "leaf",
+            "title": "Environmental Services",
+            "description": "Helping environmental contractors..."
+          }
+        }
+      },
+      "block_order": [
+        "ind_1",
+        "ind_2",
+        "ind_3",
+        "ind_4",
+        "ind_5",
+        "ind_6",
+        "ind_7"
+      ],
+      "settings": {
+        "title_prefix": "Industries Built Around ",
+        "title_highlight": "Operational Demands",
+        "subtitle": "Supporting organisations operating in waste management, municipal services, construction, quarrying and environmental sectors across the UK.",
+        "featured_title": "Waste Management",
+        "featured_desc": "Supporting waste operators, transfer stations and refuse collection fleets with specialist RCV maintenance, dig-outs, hopper services and environmental compliance solutions."
+      }
+    },
+    "nationwide_map": {
+      "type": "nationwide-coverage-map",
+      "settings": {
+        "title_prefix": "Nationwide ",
+        "title_highlight": "Coverage.",
+        "title_suffix": "Local Response.",
+        "quote_text": "Get a Quote",
+        "call_text": "CALL NOW"
+      }
+    }
+  },
+  "order": [
+    "hero_banner",
+    "feature_pillars",
+    "why_cleaning_matters",
+    "industries_grid",
+    "nationwide_map"
+  ]
+}
